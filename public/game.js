@@ -95,6 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.getElementById('hudMenuBtn').addEventListener('click', () => {
+    stopTimer();
+    window.location.href = 'index.html';
+  });
+
+  document.getElementById('hudMapBtn').addEventListener('click', () => {
+    stopTimer();
+    window.location.href = 'level.html';
+  });
+
   nextLevelBtn.addEventListener('click', () => {
     const next = currentLevel + 1;
     const unlocked = parseInt(localStorage.getItem('unlocked')) || 1;
