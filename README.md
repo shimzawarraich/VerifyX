@@ -1,4 +1,4 @@
-# VerifyX - Escape the Misinformation
+# Verify It! - Escape the Misinformation
 
 ## Overview
 
@@ -6,7 +6,7 @@ A media literacy game where you determine AI-generated news headlines, social me
 
 ## What it Does 
 
-VerifyX is a 5-level browser game that teaches players to identify misinformation in real time. Each round, the server calls the DigitalOcean Gradient AI API to generate a unique piece of content, this could include a news headline, social post, statistic, or viral image report, and the player must correctly classify it before the timer runs out.
+Verify It! is a 5-level browser game that teaches players to identify misinformation in real time. Each round, the server calls the DigitalOcean Gradient AI API to generate a unique piece of content, this could include a news headline, social post, statistic, or viral image report, and the player must correctly classify it before the timer runs out.
 
 ### Features:
 
