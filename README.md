@@ -70,8 +70,18 @@ The API key is stored securely in a .env file and never exposed to the frontend.
    ```bash
    node server.js
    ```
+   
+   If the above produces an error, delete `node_modules` and reinstall
+   ```bash
+   rm -rf node_modules
+   npm install
+   ```
+   Then start the server again
+   ```bash
+   node server.js
+   ```
 
-8. Open your browser and go to: http://localhost:3000
+9. Open your browser and go to: http://localhost:3000
 
 ## Tech Stack 
 
