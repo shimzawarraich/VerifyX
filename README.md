@@ -18,16 +18,6 @@ Verify It! is a 5-level browser game that teaches players to identify misinforma
 - Hint system
 - Integrity bar, wrong answers corrupt the archive
 - Fallback to static questions if the API is unavailable
-  
-## Screenshots:
-
-### Main Menu
-![Main Menu](public/images/main_menu.jpg)
-### Game Map
-![Game Map](public/images/map.jpg)
-### Gameplay
-![Gameplay1](public/images/gameplay.jpg)
-![Gameplay2](public/images/gameplay2.jpg)
 
 ## How DigitalOcean Gradient AI is Used
 
@@ -89,6 +79,16 @@ The API key is stored securely in a .env file and never exposed to the frontend.
 - **AI:** DigitalOcean Gradient AI — `llama3.3-70b-instruct`
 - **Frontend:** Vanilla HTML, CSS, JavaScript
 - **Storage:** localStorage
+
+## Screenshots:
+
+### Main Menu
+![Main Menu](public/images/main_menu.jpg)
+### Game Map
+![Game Map](public/images/map.jpg)
+### Gameplay
+![Gameplay1](public/images/gameplay.jpg)
+![Gameplay2](public/images/gameplay2.jpg)
 
 ## Authors
 
