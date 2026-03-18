@@ -123,6 +123,10 @@ function handleAnswer(selected) {
   } else {
     integrity = Math.max(0, integrity - INTEGRITY_LOSS);
   }
+  document.body.classList.add(isCorrect ? 'flash-correct' : 'flash-wrong');
+  setTimeout(() => {
+    document.body.classList.remove('flash-correct', 'flash-wrong');
+  }, 200);
  
   updateHUD();
   showFeedback(isCorrect, selected);
