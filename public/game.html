@@ -14,13 +14,7 @@
       <div class="orb orb2"></div>
       <div class="orb orb3"></div>
     </div>
-    <div class="data-stream">
-      <div class="stream-line"></div>
-      <div class="stream-line"></div>
-      <div class="stream-line"></div>
-      <div class="stream-line"></div>
-      <div class="stream-line"></div>
-    </div>
+    <div class="data-stream"></div>
     <div class="particle-grid"></div>
   </div>
 
@@ -39,11 +33,20 @@
       <span class="hud-value" id="scoreDisplay">000</span>
     </div>
     <div class="hud-item">
+      <span class="hud-label">STREAK</span>
+      <span class="hud-value" id="streakDisplay">✦ 0</span>
+    </div>
+    <div class="hud-item">
       <span class="hud-label">INTEGRITY</span>
       <div class="integrity-bar">
         <div class="integrity-fill" id="integrityFill"></div>
       </div>
     </div>
+  </div>
+
+  <!-- TIMER BAR -->
+  <div class="timer-wrap">
+    <div class="timer-fill" id="timerFill"></div>
   </div>
 
   <!-- MAIN GAME PANEL -->
@@ -59,11 +62,20 @@
     <div class="question-state hidden" id="questionState">
       <div class="transmission-header">
         <span class="transmission-tag">⫸ INCOMING TRANSMISSION</span>
-        <span class="threat-badge" id="threatBadge">THREAT DETECTED</span>
+        <div class="header-right">
+          <span class="format-badge" id="formatBadge">HEADLINE</span>
+          <span class="threat-badge" id="threatBadge">THREAT DETECTED</span>
+        </div>
       </div>
 
       <div class="headline-card" id="headlineCard">
         <p class="headline-text" id="headlineText"></p>
+      </div>
+
+      <!-- HINT AREA -->
+      <div class="hint-area" id="hintArea">
+        <button class="hint-btn" id="hintBtn">⚙ USE HINT <span class="hint-cost">−50 pts</span></button>
+        <p class="hint-text hidden" id="hintText"></p>
       </div>
 
       <p class="classify-prompt">▸ CLASSIFY THIS DATA PACKET</p>
@@ -91,6 +103,7 @@
     <div class="feedback-state hidden" id="feedbackState">
       <div class="feedback-icon" id="feedbackIcon"></div>
       <h2 class="feedback-title" id="feedbackTitle"></h2>
+      <div class="feedback-streak" id="feedbackStreak"></div>
       <div class="feedback-headline" id="feedbackHeadline"></div>
       <div class="feedback-explanation" id="feedbackExplanation"></div>
       <div class="feedback-correct-answer" id="feedbackCorrectAnswer"></div>
@@ -110,6 +123,10 @@
         <div class="score-row">
           <span>Score Earned</span>
           <span id="finalScore">000</span>
+        </div>
+        <div class="score-row">
+          <span>Best Streak</span>
+          <span id="finalStreak">0</span>
         </div>
         <div class="score-row">
           <span>Archive Integrity</span>

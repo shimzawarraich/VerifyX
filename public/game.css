@@ -121,6 +121,24 @@ body {
   box-shadow: 0 0 8px rgba(212, 117, 69, 0.6);
 }
 
+/* ===== TIMER BAR ===== */
+.timer-wrap {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.05);
+  flex-shrink: 0;
+}
+
+.timer-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #D47545, #F9CD89);
+  transition: width 0.1s linear, background 0.3s ease;
+  box-shadow: 0 0 8px rgba(212,117,69,0.5);
+}
+
 /* ===== MAIN PANEL ===== */
 .game-container {
   position: relative;
@@ -189,6 +207,22 @@ body {
   font-size: 0.68rem;
   letter-spacing: 3px;
   color: #5A4A6A;
+  text-transform: uppercase;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.format-badge {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: #B09AC8;
+  border: 1px solid rgba(160, 140, 200, 0.35);
+  border-radius: 4px;
+  padding: 4px 10px;
   text-transform: uppercase;
 }
 
@@ -492,6 +526,74 @@ body {
   color: #B09AC8;
   box-shadow: 0 0 20px rgba(160, 140, 200, 0.12);
 }
+
+/* ===== HINT AREA ===== */
+.hint-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.hint-btn {
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #B09AC8;
+  background: transparent;
+  border: 1px solid rgba(160, 140, 200, 0.3);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.hint-btn:hover {
+  background: rgba(160, 140, 200, 0.08);
+  border-color: rgba(160, 140, 200, 0.6);
+}
+
+.hint-btn.used {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.hint-cost {
+  opacity: 0.6;
+  font-size: 0.62rem;
+}
+
+.hint-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(176, 154, 200, 0.85);
+  background: rgba(160, 140, 200, 0.06);
+  border: 1px solid rgba(160, 140, 200, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-style: italic;
+  width: 100%;
+}
+
+/* ===== FEEDBACK STREAK NOTICE ===== */
+.feedback-streak {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #F9CD89;
+  text-shadow: 0 0 20px rgba(249,205,137,0.5);
+  padding: 5px 16px;
+  border-radius: 4px;
+  background: rgba(249,205,137,0.08);
+  border: 1px solid rgba(249,205,137,0.2);
+}
+
+.feedback-streak.hidden { display: none !important; }
 
 /* ===== ANIMATIONS ===== */
 @keyframes spin { to { transform: rotate(360deg); } }
