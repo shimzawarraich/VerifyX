@@ -64,7 +64,7 @@ The API key is stored securely in a .env file and never exposed to the frontend.
 
 6. Add your Gradient API key to .env
 
-   Open .env and replace "your_key_here" with your actual key: 
+   Open .env and replace "your_key_here" with your actual key
 
 7. Start the server
    ```bash
