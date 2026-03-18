@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerifyX Levels</title>
+  <link rel="stylesheet" href="levels.css">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="game-backdrop">
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="levels-container">
+    <h1 class="title">SYSTEM MAP</h1>
+    <p class="subtitle">Navigate the corrupted network</p>
+
+    <div class="maze">
+      <div class="node unlocked current" data-level="1">1</div>
+      <div class="connector"></div>
+
+      <div class="node locked" data-level="2">2</div>
+      <div class="connector vertical"></div>
+
+      <div class="node locked" data-level="3">3</div>
+      <div class="connector"></div>
+
+      <div class="node locked" data-level="4">4</div>
+      <div class="connector vertical"></div>
+
+      <div class="node locked" data-level="5">5</div>
+    </div>
+  </div>
+
+  <script src="levels.js"></script>
+</body>
+</html>

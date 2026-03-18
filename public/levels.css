@@ -1,0 +1,155 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: #F9CD89;
+  background: #1B183C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND (matches main menu) */
+.game-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 40% 40%, #492B42, #1B183C 70%);
+}
+
+/* glowing blobs */
+.glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  filter: blur(120px);
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+.glow1 {
+  background: #D47545;
+  top: -150px;
+  left: -150px;
+}
+
+.glow2 {
+  background: #964B44;
+  bottom: -200px;
+  right: -200px;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(80px, 60px); }
+}
+
+/* CONTAINER */
+.levels-container {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* TITLES */
+.title {
+  font-size: 4rem;
+  letter-spacing: 8px;
+  text-shadow: 0 0 20px #D47545, 0 0 40px #964B44;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 50px;
+  color: #D59CB6;
+  font-size: 1.2rem;
+}
+
+/* MAZE GRID */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* NODES */
+.node {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 3px solid #D47545;
+  background: #1B183C;
+  box-shadow: 0 0 20px #D47545;
+  transition: all 0.25s ease;
+}
+
+/* unlocked */
+.node.unlocked {
+  background: #964B44;
+  box-shadow: 0 0 40px #F9CD89;
+  cursor: pointer;
+}
+
+/* locked */
+.node.locked {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* hover */
+.node.unlocked:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 60px #F9CD89, 0 0 120px #D47545;
+}
+
+/* current level glow */
+.node.current {
+  border-color: #F9CD89;
+  box-shadow: 0 0 80px #F9CD89, 0 0 140px #D47545;
+}
+
+/* CONNECTORS */
+.connector {
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(to right, #D47545, transparent);
+  animation: pulseLine 2s infinite alternate;
+}
+
+.connector.vertical {
+  width: 5px;
+  height: 120px;
+}
+
+/* connector animation */
+@keyframes pulseLine {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* MAKE IT LOOK LIKE A MAZE (offsets) */
+.node:nth-child(3) {
+  transform: translateY(40px);
+}
+
+.node:nth-child(5) {
+  transform: translateY(-40px);
+}
