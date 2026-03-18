@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'level.html';
     });
     
-    // Optional: Add a cool transition effect when leaving
     playBtn.addEventListener('click', function(e) {
         e.preventDefault();
         

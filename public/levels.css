@@ -17,7 +17,6 @@ body {
   align-items: center;
 }
 
-/* BACKGROUND (matches main menu) */
 .game-backdrop {
   position: absolute;
   inset: 0;

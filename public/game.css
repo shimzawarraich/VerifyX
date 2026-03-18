@@ -18,7 +18,6 @@ body {
   background: #1B183C;
 }
 
-/* ===== BACKDROP (identical to menu) ===== */
 .game-backdrop {
   position: fixed;
   inset: 0;
@@ -88,7 +87,6 @@ body {
   animation: drift 30s infinite linear;
 }
 
-/* ===== HUD BAR ===== */
 .hud {
   position: relative;
   z-index: 20;
@@ -159,13 +157,11 @@ body {
   overflow: hidden;
 }
 
-/* inner content max-width so it doesn't stretch too wide on large screens */
 .game-container > * {
   width: 100%;
   max-width: 860px;
 }
 
-/* ===== INNER CONTENT WRAPPER (centres content on full page) ===== */
 .loading-state,
 .question-state,
 .feedback-state,
