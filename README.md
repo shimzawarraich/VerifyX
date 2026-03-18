@@ -18,6 +18,16 @@ Verify It! is a 5-level browser game that teaches players to identify misinforma
 - Hint system
 - Integrity bar, wrong answers corrupt the archive
 - Fallback to static questions if the API is unavailable
+  
+## Screenshots:
+
+### Main Menu
+![Main Menu](public/images/main_menu.jpg)
+### Game Map
+![Game Map](public/images/map.jpg)
+### Gameplay
+![Gameplay1](public/images/gameplay.jpg)
+![Gameplay2](public/images/gameplay2.jpg)
 
 ## How DigitalOcean Gradient AI is Used
 
